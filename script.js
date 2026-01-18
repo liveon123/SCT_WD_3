@@ -71,7 +71,7 @@ function checkResult() {
   switchPlayer();
 }
 
-// Simple computer move (random empty cell)
+//computer move (random empty cell)
 function computerMove() {
   const emptyIndices = gameState.map((val, idx) => val === "" ? idx : null).filter(val => val !== null);
   const randomIndex = emptyIndices[Math.floor(Math.random() * emptyIndices.length)];
@@ -87,3 +87,4 @@ function resetGame() {
   statusText.textContent = `Player ${currentPlayer}'s turn`;
   document.querySelectorAll('.cell').forEach(cell => cell.textContent = "");
 }
+
